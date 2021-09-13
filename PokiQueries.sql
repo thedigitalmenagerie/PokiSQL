@@ -53,12 +53,19 @@ from Author
 
 -- 10. How many authors are in the first, second or third grades?--
 
-select count(*) [Number of Authors in 1st, 2nd, or 3rd Grade]
+/* select count(*) [Number of Authors in 1st, 2nd, or 3rd Grade]
 from Author
 	join Grade on Grade.id = Author.GradeId
-	where Grade.Name != '5th Grade' or Grade.Name != '4th Grade';
+	where Grade.Name != '5th Grade' or Grade.Name != '4th Grade'; */
 
 -- 11. What is the total number of poems written by fourth graders?--
+
+select count(*) [Number of Poems from 4th Graders]
+from Poem
+	join Author on Poem.AuthorId = Author.Id
+	join Grade on Author.GradeId = Grade.Id
+	where Grade.Name = '4th Grade'
+
 -- 12. How many poems are there per grade?--
 -- 13. How many authors are in each grade? (Order your results by grade starting with `1st Grade`)--
 -- 14. What is the title of the poem that has the most words?--
