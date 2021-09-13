@@ -1,5 +1,6 @@
 -- 1. What grades are stored in the database? --
-
+/* select Name [Grades Stored in Database]
+from Grade */
 -- 2. What emotions may be associated with a poem?--
 -- 3. How many poems are in the database?--
 -- 4. Sort authors alphabetically by name. What are the names of the top 76 authors?--
