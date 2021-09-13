@@ -21,10 +21,10 @@ order by [Name] ASC */
 
 -- 5. Starting with the above query, add the grade of each of the authors.--
 
-select TOP (76) Author.Name [Top 76 Authors Alphabetically], Grade.Name [Author's Grade]
+/* select TOP (76) Author.Name [Top 76 Authors Alphabetically], Grade.Name [Author's Grade]
 from Author
 	join Grade on Author.GradeId = Grade.Id
-order by Author.Name ASC
+order by Author.Name ASC */
 
 -- 6. Starting with the above query, add the recorded gender of each of the authors.--
 
@@ -34,6 +34,10 @@ from Author
 order by Author.Name ASC */
 
 -- 7. What is the total number of words in all poems in the database?--
+
+select sum(WordCount)
+from Poem
+
 -- 8. Which poem has the fewest characters?--
 -- 9. How many authors are in the third grade?--
 -- 10. How many authors are in the first, second or third grades?--
