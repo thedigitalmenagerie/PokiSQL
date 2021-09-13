@@ -121,13 +121,22 @@ group by Emotion.Name */
 
 -- 19. Which grade has the largest number of poems with an emotion of joy?--
 
-select TOP(1) count(*) [Number of Associations with Joy], Grade.Name [Grade]
+/* select TOP(1) count(*) [Number of Associations with Joy], Grade.Name [Grade]
 from Poem
 	join PoemEmotion on Poem.Id = PoemEmotion.PoemId
 	join Author on Poem.AuthorId = Author.Id
-	join Grade on Author.GenderId = Grade.Id
+	join Grade on Author.GradeId = Grade.Id
 	join Emotion on PoemEmotion.EmotionId = Emotion.Id
 	where Emotion.Name = 'Joy'
-group by Grade.Name
+group by Grade.Name */
 
 -- 20. Which gender has the least number of poems with an emotion of fear?--
+
+/* select TOP(1) count(*) [Number of Associations], Gender.Name [Gender], Emotion.Name
+from Poem
+	join Author on Poem.AuthorId = Author.Id
+	join Gender on Author.GenderId = Gender.Id
+	join PoemEmotion on Poem.Id = PoemEmotion.PoemId
+	join Emotion on PoemEmotion.EmotionId = Emotion.Id
+	where Emotion.Name = 'Fear'
+group by Gender.Name, Emotion.Name */
