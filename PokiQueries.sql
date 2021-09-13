@@ -83,11 +83,18 @@ group by Grade.Name */
 
 -- 14. What is the title of the poem that has the most words?--
 
-select TOP(1) WordCount, Title
+/* select TOP(1) WordCount, Title
 from Poem
-order by WordCount DESC
+order by WordCount DESC */
 
 -- 15. Which author(s) have the most poems? (Remember authors can have the same name.)--
+
+select TOP(1) count(Title) [Number of Poems], Name
+from Author
+	join Poem on Author.Id = Poem.AuthorId
+group by Name
+order by [Number of Poems] DESC
+
 -- 16. How many poems have an emotion of sadness?--
 -- 17. How many poems are not associated with any emotion?--
 -- 18. Which emotion is associated with the least number of poems?--
