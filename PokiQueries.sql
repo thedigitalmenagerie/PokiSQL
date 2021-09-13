@@ -5,6 +5,8 @@ from Grade */
 /* select Name [Emotions Associated With Database Poems]
 from Emotion */
 -- 3. How many poems are in the database?--
+/* select count(*) [Number of Poems in Database]
+from Poem */
 -- 4. Sort authors alphabetically by name. What are the names of the top 76 authors?--
 -- 5. Starting with the above query, add the grade of each of the authors.--
 -- 6. Starting with the above query, add the recorded gender of each of the authors.--
