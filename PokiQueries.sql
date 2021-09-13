@@ -35,10 +35,13 @@ order by Author.Name ASC */
 
 -- 7. What is the total number of words in all poems in the database?--
 
-select sum(WordCount)
-from Poem
+/* select sum(WordCount)
+from Poem */
 
 -- 8. Which poem has the fewest characters?--
+select TOP(1) CharCount [Character Count], Title
+from Poem
+order by CharCount ASC
 -- 9. How many authors are in the third grade?--
 -- 10. How many authors are in the first, second or third grades?--
 -- 11. What is the total number of poems written by fourth graders?--
