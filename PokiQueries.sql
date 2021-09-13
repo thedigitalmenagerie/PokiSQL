@@ -97,13 +97,20 @@ order by [Number of Poems] DESC */
 
 -- 16. How many poems have an emotion of sadness?--
 
+/* select count(*) [Number of Poems with Sadness Emotion]
+from Poem
+	join PoemEmotion on Poem.Id = PoemEmotion.PoemId
+	join Emotion on PoemEmotion.EmotionId = Emotion.Id
+	where Emotion.Name = 'Sadness' */
+
+-- 17. How many poems are not associated with any emotion?--
+
 select count(*) [Number of Poems with Sadness Emotion]
 from Poem
 	join PoemEmotion on Poem.Id = PoemEmotion.PoemId
 	join Emotion on PoemEmotion.EmotionId = Emotion.Id
-	where Emotion.Name = 'Sadness'
+	where Emotion.Name = 'NULL'
 
--- 17. How many poems are not associated with any emotion?--
 -- 18. Which emotion is associated with the least number of poems?--
 -- 19. Which grade has the largest number of poems with an emotion of joy?--
 -- 20. Which gender has the least number of poems with an emotion of fear?--
