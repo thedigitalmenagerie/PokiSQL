@@ -2,6 +2,8 @@
 /* select Name [Grades Stored in Database]
 from Grade */
 -- 2. What emotions may be associated with a poem?--
+/* select Name [Emotions Associated With Database Poems]
+from Emotion */
 -- 3. How many poems are in the database?--
 -- 4. Sort authors alphabetically by name. What are the names of the top 76 authors?--
 -- 5. Starting with the above query, add the grade of each of the authors.--
