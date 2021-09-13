@@ -76,12 +76,17 @@ group by Grade.Name */
 
 -- 13. How many authors are in each grade? (Order your results by grade starting with `1st Grade`)--
 
-select Grade.Name, count(*) [Number of Authors]
+/* select Grade.Name, count(*) [Number of Authors]
 from Author
 	join Grade on Author.GradeId = Grade.Id
-group by Grade.Name
+group by Grade.Name */
 
 -- 14. What is the title of the poem that has the most words?--
+
+select TOP(1) WordCount, Title
+from Poem
+order by WordCount DESC
+
 -- 15. Which author(s) have the most poems? (Remember authors can have the same name.)--
 -- 16. How many poems have an emotion of sadness?--
 -- 17. How many poems are not associated with any emotion?--
