@@ -1,22 +1,38 @@
 -- 1. What grades are stored in the database? --
+
 /* select Name [Grades Stored in Database]
 from Grade */
+
 -- 2. What emotions may be associated with a poem?--
+
 /* select Name [Emotions Associated With Database Poems]
 from Emotion */
+
 -- 3. How many poems are in the database?--
+
 /* select count(*) [Number of Poems in Database]
 from Poem */
+
 -- 4. Sort authors alphabetically by name. What are the names of the top 76 authors?--
+
 /* select TOP (76) [Name] [Top 76 Authors Alphabetically]
 from Author
 order by [Name] ASC */
+
 -- 5. Starting with the above query, add the grade of each of the authors.--
-select TOP (76) Author.Name [Top 76 Authors Alphabetically], Gender.Name [Author's Gender]
+
+select TOP (76) Author.Name [Top 76 Authors Alphabetically], Grade.Name [Author's Grade]
+from Author
+	join Grade on Author.GradeId = Grade.Id
+order by Author.Name ASC
+
+-- 6. Starting with the above query, add the recorded gender of each of the authors.--
+
+/* select TOP (76) Author.Name [Top 76 Authors Alphabetically], Gender.Name [Author's Gender]
 from Author
 	join Gender on Author.GenderId = Gender.Id
-order by Author.Name ASC
--- 6. Starting with the above query, add the recorded gender of each of the authors.--
+order by Author.Name ASC */
+
 -- 7. What is the total number of words in all poems in the database?--
 -- 8. Which poem has the fewest characters?--
 -- 9. How many authors are in the third grade?--
