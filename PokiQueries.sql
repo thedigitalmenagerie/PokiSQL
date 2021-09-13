@@ -8,6 +8,9 @@ from Emotion */
 /* select count(*) [Number of Poems in Database]
 from Poem */
 -- 4. Sort authors alphabetically by name. What are the names of the top 76 authors?--
+/* select TOP (76) [Name] [Top 76 Authors Alphabetically]
+from Author
+order by [Name] ASC */
 -- 5. Starting with the above query, add the grade of each of the authors.--
 -- 6. Starting with the above query, add the recorded gender of each of the authors.--
 -- 7. What is the total number of words in all poems in the database?--
